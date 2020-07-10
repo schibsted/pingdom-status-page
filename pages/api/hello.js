@@ -1,6 +1,13 @@
-// Next.js API route support: https://nextjs.org/docs/api-routes/introduction
+import db from '../../lib/db';
 
-export default (req, res) => {
-  res.statusCode = 200
-  res.json({ name: 'John Doe' })
+export default async (req, res) => {
+  const sites = await new Promise((resolve, reject) => {
+    db.all('SELECT * FROM sites', (err, rows) => {
+      if (err) return reject(err);
+      resolve(rows);
+    });
+  });
+
+  res.statusCode = 200;
+  res.json(sites);
 }
