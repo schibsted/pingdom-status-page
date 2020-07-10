@@ -1,4 +1,6 @@
-import Head from 'next/head'
+import Head from 'next/head';
+
+import Sites from '../components/Sites';
 
 export default function Home() {
   return (
@@ -9,6 +11,9 @@ export default function Home() {
       </Head>
 
       <main>
+        <img src="/vg.svg" />
+
+        <Sites />
       </main>
 
       <footer>
@@ -32,5 +37,5 @@ export default function Home() {
         }
       `}</style>
     </div>
-  )
+  );
 }
