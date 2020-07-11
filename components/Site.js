@@ -66,8 +66,13 @@ export default function Site(props) {
           border-bottom-left-radius: 0;
         }
 
-        .status {
+        .status.up {
           background: green;
+          color: #fff;
+        }
+
+        .status.down {
+          background: #EC2027;
           color: #fff;
         }
 
