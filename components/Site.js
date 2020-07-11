@@ -14,9 +14,9 @@ export default function Site(props) {
   return (
     <div>
       <div className="site">
-        <h3 className="name">{props.name}</h3>
-        <div className="status">
-          <div className={"value " + props.status}>{props.status}</div>
+        <div className="name">
+          <div className="value">{props.name}</div> is&nbsp;
+          <div className={"status " + props.status}>{props.status}</div>
         </div>
         <div className="details">
           Up <div className="percent">{percent}%</div> last 30 days
@@ -36,40 +36,24 @@ export default function Site(props) {
           border-bottom: 2px solid rgba(0, 0, 0, 0.2);
           background: white;
           border-radius: 5px;
+          font-size: 1.3rem;
         }
 
         .name {
-          width: 20%;
+        }
+
+        .name .value,
+        .status {
+          font-weight: bold;
+          display: inline-block;
+          background: rgba(0, 0, 0, 0.04);
+          padding: 5px 9px;
+          border-bottom: 2px solid rgba(0, 0, 0, 0.08);
+          border-radius: 3px;
         }
 
         .status {
-          display: inline-block;
-          position: relative;
           background: green;
-          width: 4.5rem;
-          height: 4.5rem;
-          border-radius: 500px;
-          font-size: 1.3rem;
-          color: white;
-          text-align: center;
-          margin-right: 2rem;
-        }
-
-        .status .value {
-          margin: 0;
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-          text-transform: uppercase;
-          font-weight: bold;
-        }
-
-        .status .value.up {
-          color: #fff;
-        }
-
-        .status .value.down {
           color: #fff;
         }
 
