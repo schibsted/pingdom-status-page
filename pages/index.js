@@ -38,6 +38,7 @@ export default function Home() {
           padding: 0;
           margin: 0;
           background: rgb(28, 28, 28);
+          color: #fff;
           font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
             Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
             sans-serif;

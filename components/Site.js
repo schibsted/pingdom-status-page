@@ -40,8 +40,8 @@ export default function Site(props) {
           align-items: center;
           padding: 25px;
           margin-bottom: 1rem;
-          background: rgba(255, 255, 255, 0.02);
-          border: 2px solid rgba(255, 255, 255, 1);
+          background: rgba(255, 255, 255, 0.01);
+          border: 2px dashed rgba(255, 255, 255, 0.1);
           border-radius: 5px;
           font-size: 1.3rem;
           color: #fff;
@@ -55,9 +55,9 @@ export default function Site(props) {
         .status {
           font-weight: bold;
           display: inline-block;
-          background: rgba(0, 0, 0, 0.04);
+          background: rgba(0, 0, 0, 0.2);
           padding: 5px 9px;
-          border-bottom: 2px solid rgba(0, 0, 0, 0.08);
+          border-bottom: 3px solid rgba(0, 0, 0, 0.3);
           border-radius: 3px;
         }
 
@@ -76,7 +76,7 @@ export default function Site(props) {
           flex-direction: row-reverse;
           flex-wrap: nowrap;
           align-items: center;
-          font-size: 1rem;
+          font-size: 0.9rem;
           flex-direction: row;
           flex-wrap: nowrap;
           justify-content: space-between;
@@ -107,19 +107,20 @@ export default function Site(props) {
         }
 
         .details .detail .label {
-          border-bottom: 2px solid rgba(0, 0, 0, 0.08);
-          background: rgba(0, 0, 0, 0.04);
-          color: rgba(0, 0, 0, 0.6);
+          border-bottom: 3px solid rgba(0, 0, 0, 0.3);
+          background: rgba(0, 0, 0, 0.2);
+          color: rgba(255, 255, 255, 0.4);
           border-top-right-radius: 0;
           border-bottom-right-radius: 0;
         }
 
         .details .detail .value {
-          border-bottom: 2px solid rgba(0, 0, 0, 0.95);
-          background: rgba(0, 0, 0, 0.75);
+          border-bottom: 3px solid rgba(0, 0, 0, 0.3);
+          background: rgba(0, 0, 0, 0.5);
           color: #fff;
           border-top-left-radius: 0;
           border-bottom-left-radius: 0;
+          min-width: 5rem;
         }
 
       `}</style>
