@@ -39,11 +39,12 @@ export default function Site(props) {
           justify-content: space-between;
           align-items: center;
           padding: 25px;
-          margin-bottom: 15px;
-          border-bottom: 2px solid rgba(0, 0, 0, 0.15);
-          background: white;
+          margin-bottom: 1rem;
+          background: rgba(255, 255, 255, 0.02);
+          border: 2px solid rgba(255, 255, 255, 1);
           border-radius: 5px;
           font-size: 1.3rem;
+          color: #fff;
         }
 
         .name .value {

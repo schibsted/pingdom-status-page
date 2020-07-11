@@ -12,7 +12,13 @@ export default function Home() {
 
       <header className="header">
         <div className="container">
-          <img className="logo" src="/vg.svg" />
+          <div className="header-content">
+            <div className="logo">
+              <img className="image" src="/vg.svg" />
+              <div className="status">Status</div>
+            </div>
+            <div className="link"><a href="https://vg.no">vg.no</a></div>
+          </div>
         </div>
       </header>
 
@@ -31,7 +37,7 @@ export default function Home() {
         body {
           padding: 0;
           margin: 0;
-          background: rgb(242, 243, 243);
+          background: rgb(28, 28, 28);
           font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
             Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
             sans-serif;
@@ -43,9 +49,44 @@ export default function Home() {
           margin-bottom: 2rem;
         }
 
+        .header-content {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: nowrap;
+          justify-content: space-between;
+          align-items: center;
+        }
+
         .header .logo {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: nowrap;
+          align-items: center;
+        }
+
+        .header .logo .image {
           height: 2rem;
-          margin: 1rem 0;
+          margin: 1.5rem 1rem 1.5rem 0;
+        }
+        
+        .header .logo .status {
+          color: #fff;
+          font-weight: bold;
+        }
+        
+        .header .link a {
+          border: 2px solid #fff;
+          border-radius: 5px;
+          padding: 0.5rem 0.5rem 0.6rem 0.5rem;
+          color: #fff;
+          text-decoration: none;
+          font-weight: bold;
+          transition: all 0.1s;
+        }
+        
+        .header .link a:hover {
+          background: #fff;
+          color: #EC2027;
         }
 
         .container {
