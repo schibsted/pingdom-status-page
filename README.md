@@ -10,7 +10,7 @@ the latest data from Pingdom.
 You need to set the environment variables:
 
 * `PINGDOM_API_KEY`: A Pingdom API key, obviously
-* `PINGDOM_FEATURED_CHECKS`: A comma-separated list of check IDs (find them in the URL on my.pingdom.com)
+* `PINGDOM_FEATURED_CHECKS`: A comma-separated list of Pingdom check names
 
 To run the server, `$ yarn dev` for development or `$ yarn start` for production. Then open
 [http://localhost:3000](http://localhost:3000) with your browser to see it.

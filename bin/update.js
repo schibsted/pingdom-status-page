@@ -18,7 +18,7 @@ db.serialize(() => {
 pingdom.checks(PINGDOM_FEATURED_CHECKS).then(checks => {
   checks.map(check => {
     pingdom.uptime(check.id).then(uptime => {
-      db.run(`REPLACE INTO sites (id, name, status, uptime, downtime, unknowntime)
+      db.run(`INSERT INTO sites (id, name, status, uptime, downtime, unknowntime)
         VALUES ($id, $name, $status, $uptime, $downtime, $unknowntime)`, {
         $id: check.id,
         $name: check.name,
