@@ -11,21 +11,23 @@ db.serialize(() => {
     status TEXT NOT NULL,
     uptime NUMERIC,
     downtime NUMERIC,
-    unknowntime NUMERIC
+    unknowntime NUMERIC,
+    position NUMERIC
   )`);
 });
 
 pingdom.checks(PINGDOM_FEATURED_CHECKS).then(checks => {
   checks.map(check => {
     pingdom.uptime(check.id).then(uptime => {
-      db.run(`INSERT INTO sites (id, name, status, uptime, downtime, unknowntime)
-        VALUES ($id, $name, $status, $uptime, $downtime, $unknowntime)`, {
+      db.run(`INSERT INTO sites (id, name, status, uptime, downtime, unknowntime, position)
+        VALUES ($id, $name, $status, $uptime, $downtime, $unknowntime, $position)`, {
         $id: check.id,
         $name: check.name,
         $status: check.status,
         $uptime: uptime.summary.status.totalup,
         $downtime: uptime.summary.status.totaldown,
-        $unknowntime: uptime.summary.status.totalunknown
+        $unknowntime: uptime.summary.status.totalunknown,
+        $position: PINGDOM_FEATURED_CHECKS.indexOf(check.name)
       });
 
       console.log(`Updated ${check.name}`);
