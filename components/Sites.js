@@ -16,10 +16,6 @@ export default function Sites(props) {
 
   return (
     <div>
-      <div className="summary">
-        Everything is awesome!
-      </div>
-      
       <div className="sites">
         {sites.map(site => (
           <Site
@@ -34,14 +30,6 @@ export default function Sites(props) {
       </div>
 
       <style jsx>{`
-        
-        .summary {
-          text-align: center;
-          font-weight: bold;
-          font-size: 1.5rem;
-          margin-bottom: 2rem;
-        }
-
       `}</style>
     </div>
   );

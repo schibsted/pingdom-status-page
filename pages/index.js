@@ -33,21 +33,22 @@ export default function Home() {
       `}</style>
 
       <style jsx global>{`
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
         html,
         body {
           padding: 0;
           margin: 0;
           background: rgb(28, 28, 28);
           color: #fff;
-          font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
-            Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
-            sans-serif;
+          font-family: Roboto, Helvetica, Arial;
         }
 
         .header {
           width: 100%;
           background: #EC2027;
           margin-bottom: 2rem;
+          border-bottom: 5px solid rgba(0, 0, 0, 0.15);
         }
 
         .header-content {
@@ -67,12 +68,13 @@ export default function Home() {
 
         .header .logo .image {
           height: 2rem;
-          margin: 1.5rem 1rem 1.5rem 0;
+          margin: 1.2rem 1rem 1.2rem 0;
         }
         
         .header .logo .status {
           color: #fff;
           font-weight: bold;
+          text-transform: uppercase;
         }
         
         .header .link a {

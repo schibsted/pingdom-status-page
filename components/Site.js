@@ -38,10 +38,10 @@ export default function Site(props) {
           flex-wrap: nowrap;
           justify-content: space-between;
           align-items: center;
-          padding: 25px;
+          padding: 1.2rem;
           margin-bottom: 1rem;
           background: rgba(255, 255, 255, 0.01);
-          border: 2px dashed rgba(255, 255, 255, 0.1);
+          border: 2px solid rgba(255, 255, 255, 0.04);
           border-radius: 5px;
           font-size: 1.3rem;
           color: #fff;
