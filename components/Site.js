@@ -68,7 +68,7 @@ export default function Site(props) {
         .status {
           font-weight: bold;
           background: rgba(0, 0, 0, 0.2);
-          padding: 0.3rem 0.8rem;
+          padding: 0.1rem 0.8rem;
           border-bottom: 3px solid rgba(0, 0, 0, 0.3);
           border-radius: 3px;
           line-height: 2rem;
