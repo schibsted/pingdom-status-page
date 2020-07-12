@@ -25,6 +25,10 @@ export default memo(({ sites }) => {
     );
   }).reduce((sum, value) => sum + value, 0) / sites.length;
 
+  if (isNaN(avg)) {
+    return null;
+  }
+
   return (
     <>
       <h1 className="awesome-meter">Everything is {isItAwsome(avg)} {Math.floor(avg)}%</h1>
