@@ -69,8 +69,21 @@ export default function Site(props) {
         }
 
         .status.up {
-          background: green;
+          background: hsla(120, 100%, 25%, 1);
           color: #fff;
+          animation: green-pulse 1.5s infinite alternate ease-in-out;
+        }
+
+        @keyframes green-pulse {
+          0% {
+            background: hsla(120, 100%, 25%, 1);
+          }
+          80% {
+            background: hsla(120, 100%, 25%, 1);
+          }
+          100% {
+            background: hsla(120, 100%, 28%, 1);
+          }
         }
 
         .status.down {
