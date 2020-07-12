@@ -1,4 +1,5 @@
 import { memo } from 'react';
+
 const formatPercent = (value) => {
   if (value < 100) {
     return parseFloat(value);
@@ -28,7 +29,7 @@ export default memo(({ sites }) => {
   }).reduce((sum, value) => sum + value, 0) / sites.length;
 
   let header = (
-      <h1 className="awesome-meter">Everything is {isItAwsome(avg)} {Math.floor(avg)}%</h1>
+      <h1 className="awesome-meter">Everything is {Math.floor(avg)}% {isItAwsome(avg)}</h1>
   );
 
   if (!allUp(sites)) {
