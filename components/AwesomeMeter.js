@@ -12,10 +12,13 @@ const isItAwsome = (avg) => {
   if (isNaN(avg)) {
     return '';
   }
-  if (avg >= 90) {
+
+  if(avg >= 99) {
     return <strong className="green">awesome</strong>
+  } else if(avg >= 90) {
+    return <strong className="green">okay</strong>
   } else {
-    return <strong className="blue">OK</strong>
+    return <strong className="red">bad</strong>
   }
 }
 
@@ -52,6 +55,9 @@ export default memo(({ sites }) => {
         }
         .blue {
           color: blue;
+        }
+        .red {
+          color: red;
         }
       `}
       </style>
