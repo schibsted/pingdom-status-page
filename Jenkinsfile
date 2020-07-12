@@ -26,7 +26,7 @@ def stagedRelease = createRelease(
             enabled: true
         ]
     ]],
-    staticSync: [
+/*    staticSync: [
         containerSrc: '/usr/src/app',
         destination: '/services/nginx/vhost/static.vg.no/direkte-widget/',
         files: [
@@ -35,7 +35,7 @@ def stagedRelease = createRelease(
                 excludes: ['*.json']
             ]
         ]
-    ],
+    ],*/
 )
 
 buildRelease(
