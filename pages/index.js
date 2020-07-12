@@ -57,6 +57,7 @@ export default function Home() {
           flex-wrap: nowrap;
           justify-content: space-between;
           align-items: center;
+          padding: 0.5rem 0.5rem 0 0.5rem;
         }
 
         .header .logo {
