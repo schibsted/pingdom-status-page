@@ -18,6 +18,8 @@ const isItAwsome = (avg) => {
   }
 }
 
+const allUp = (sites) => sites.every(({ status }) => status === 'up');
+
 export default memo(({ sites }) => {
   const avg = sites.map(({ uptime, downtime, unknowntime }) => {
     return formatPercent(
@@ -25,16 +27,30 @@ export default memo(({ sites }) => {
     );
   }).reduce((sum, value) => sum + value, 0) / sites.length;
 
+  let header = (
+      <h1 className="awesome-meter">Everything is {isItAwsome(avg)} {Math.floor(avg)}%</h1>
+  );
+
+  if (!allUp(sites)) {
+    header = <h1 className="awesome-meter">Some sites are down 😱</h1>
+  }
+
   if (isNaN(avg)) {
-    return null;
+    header = null;
   }
 
   return (
     <>
-      <h1 className="awesome-meter">Everything is {isItAwsome(avg)} {Math.floor(avg)}%</h1>
-      <style jsx>{`
+      {header}
+      <style jsx global>{`
         .awesome-meter {
           text-align: center;
+        }
+        .green {
+          color: green;
+        }
+        .blue {
+          color: blue;
         }
       `}
       </style>
