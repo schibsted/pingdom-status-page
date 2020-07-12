@@ -29,7 +29,7 @@ export default memo(({ sites }) => {
   }).reduce((sum, value) => sum + value, 0) / sites.length;
 
   let header = (
-      <h1 className="awesome-meter">Everything is {Math.floor(avg)}% {isItAwsome(avg)}</h1>
+      <h1 className="awesome-meter">Everything is {avg.toFixed(3)}% {isItAwsome(avg)}</h1>
   );
 
   if (!allUp(sites)) {
