@@ -87,8 +87,21 @@ export default function Site(props) {
         }
 
         .status.down {
-          background: #EC2027;
+          background: hsla(358, 84%, 53%, 1);
           color: #fff;
+          animation: red-pulse 0.75s infinite alternate ease-in-out;
+        }
+
+        @keyframes red-pulse {
+          0% {
+            background: hsla(358, 84%, 53%, 1);
+          }
+          80% {
+            background: hsla(358, 84%, 53%, 1);
+          }
+          100% {
+            background: hsla(358, 100%, 60%, 1);
+          }
         }
 
         .details {
