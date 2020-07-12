@@ -138,7 +138,7 @@ export default function Site(props) {
           .name {
             display: block;
             width: 100%;
-            margin-bottom: 1rem;
+            margin-bottom: 0.8rem;
           }
 
           .name .value {
