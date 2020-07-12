@@ -47,24 +47,40 @@ export default function Site(props) {
           color: #fff;
         }
 
+        .name {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: nowrap;
+          justify-content: space-between;
+          align-items: center;
+          font-size: 1rem;
+        }
+
         .name .value {
-          min-width: 12rem;
+          flex-grow: 1;
+          width: 15rem;
+          border-top-right-radius: 0;
+          border-bottom-right-radius: 0;
+          text-transform: uppercase;
         }
 
         .name .value,
         .status {
           font-weight: bold;
-          display: inline-block;
           background: rgba(0, 0, 0, 0.2);
-          padding: 5px 9px;
+          padding: 0.3rem 0.8rem;
           border-bottom: 3px solid rgba(0, 0, 0, 0.3);
           border-radius: 3px;
+          line-height: 2rem;
         }
 
         .status {
           text-align: center;
           border-top-left-radius: 0;
           border-bottom-left-radius: 0;
+          text-transform: uppercase;
+          font-size: 1rem;
+          width: 5rem;
         }
 
         .status.up {
@@ -161,18 +177,10 @@ export default function Site(props) {
           }
 
           .name {
-            display: block;
             width: 100%;
             margin-bottom: 0.8rem;
           }
 
-          .name .value {
-            width: 75%;
-          }
-
-          .name .status {
-            width: 25%;
-          }
         }
 
       `}</style>
