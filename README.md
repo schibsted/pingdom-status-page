@@ -16,3 +16,10 @@ To run the server, `$ yarn dev` for development or `$ yarn start` for production
 [http://localhost:3000](http://localhost:3000) with your browser to see it.
 
 To run the script, `$ yarn run update`.
+
+## Deploy
+
+```
+$ docker build -t gcr.io/vg-status-page/vgstatus .
+$ docker push gcr.io/vg-status-page-vgstatus
+```

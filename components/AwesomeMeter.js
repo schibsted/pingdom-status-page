@@ -49,6 +49,7 @@ export default memo(({ sites }) => {
       <style jsx global>{`
         .awesome-meter {
           text-align: center;
+          font-family: monospace;
         }
         .green {
           color: green;

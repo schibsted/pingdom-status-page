@@ -33,6 +33,7 @@ export default function Site(props) {
 
       <style jsx>{`
         .site {
+          font-family: monospace;
           display: flex;
           flex-direction: row;
           flex-wrap: nowrap;
