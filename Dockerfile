@@ -9,15 +9,14 @@ RUN export PINGDOM_FEATURED_CHECKS=www.vg.no,direkte.vg.no,static.vg.no,vgd.no,e
 WORKDIR /usr/src/app
 
 COPY package*.json ./
-COPY bin/ ./bin
 
 RUN yarn install --production --frozen-lockfile
-RUN yarn run update
 
 COPY . .
 
 EXPOSE 3000
 
 RUN yarn build
+RUN yarn run update
 
 CMD ["yarn", "start"]
