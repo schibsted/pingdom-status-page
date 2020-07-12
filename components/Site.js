@@ -45,7 +45,6 @@ export default function Site(props) {
           border-radius: 5px;
           font-size: 1.3rem;
           color: #fff;
-          margin: 1rem;
         }
 
         .name .value {

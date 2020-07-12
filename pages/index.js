@@ -48,7 +48,8 @@ export default function Home() {
           width: 100%;
           background: #EC2027;
           margin-bottom: 2rem;
-          border-bottom: 5px solid rgba(0, 0, 0, 0.15);
+          padding: 0.5rem 0 0.2rem 0;
+          border-bottom: 0.3rem solid rgba(0, 0, 0, 0.15);
         }
 
         .header-content {
@@ -57,7 +58,6 @@ export default function Home() {
           flex-wrap: nowrap;
           justify-content: space-between;
           align-items: center;
-          padding: 0.5rem 0.5rem 0 0.5rem;
         }
 
         .header .logo {
@@ -97,6 +97,7 @@ export default function Home() {
         .container {
           max-width: 1100px;
           margin: 0 auto;
+          padding: 0 1rem;
         }
 
         * {
