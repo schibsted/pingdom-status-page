@@ -45,6 +45,7 @@ export default function Site(props) {
           border-radius: 5px;
           font-size: 1.3rem;
           color: #fff;
+          margin: 1rem;
         }
 
         .name .value {
@@ -62,6 +63,7 @@ export default function Site(props) {
         }
 
         .status {
+          text-align: center;
           border-top-left-radius: 0;
           border-bottom-left-radius: 0;
         }
@@ -126,6 +128,26 @@ export default function Site(props) {
           border-top-left-radius: 0;
           border-bottom-left-radius: 0;
           min-width: 5rem;
+        }
+
+        @media (max-width: 600px) {
+          .site {
+            flex-wrap: wrap;
+          }
+
+          .name {
+            display: block;
+            width: 100%;
+            margin-bottom: 1rem;
+          }
+
+          .name .value {
+            width: 75%;
+          }
+
+          .name .status {
+            width: 25%;
+          }
         }
 
       `}</style>
