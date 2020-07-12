@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "update": "node -r esm bin/update"
+    "update": "node -r esm bin/update.js"
   },
   "bin": {
     "vgstatus-update": "bin/update"
