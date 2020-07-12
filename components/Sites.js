@@ -1,4 +1,3 @@
-import axios from 'axios';
 import React, { useState, useEffect } from 'react';
 
 import Site from './Site';
@@ -8,11 +7,14 @@ export default function Sites(props) {
   const [sites, setSites] = useState([]);
 
   useEffect(() => {
-    axios.get(
-      '/api/data'
-    ).then(response => {
-      setSites(response.data);
-    });
+    (async () => {
+      const req = await fetch('/api/data');
+      if (!req.ok) {
+        setSites([]);
+      }
+      const data = await req.json();
+      setSites(data);
+    })();
   }, []);
 
   return (
