@@ -8,6 +8,7 @@ export default function Home() {
       <Head>
         <title>VG Status</title>
         <link rel="icon" href="/favicon.ico" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap"/>
       </Head>
 
       <header className="header">
@@ -33,7 +34,6 @@ export default function Home() {
       `}</style>
 
       <style jsx global>{`
-        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
         html,
         body {
