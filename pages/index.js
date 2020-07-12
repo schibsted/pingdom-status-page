@@ -4,7 +4,7 @@ import Sites from '../components/Sites';
 
 export default function Home() {
   return (
-    <div> 
+    <div>
       <Head>
         <title>VG Status</title>
         <link rel="icon" href="/favicon.ico" />
@@ -14,7 +14,7 @@ export default function Home() {
         <div className="container">
           <div className="header-content">
             <div className="logo">
-              <img className="image" src="/vg.svg" />
+              <img width="132" height="32" className="image" src="/vg.svg" />
               <div className="status">Status</div>
             </div>
             <div className="link"><a href="https://vg.no">vg.no</a></div>
@@ -67,16 +67,17 @@ export default function Home() {
         }
 
         .header .logo .image {
+          max-width: 100%;
           height: 2rem;
           margin: 1.2rem 1rem 1.2rem 0;
         }
-        
+
         .header .logo .status {
           color: #fff;
           font-weight: bold;
           text-transform: uppercase;
         }
-        
+
         .header .link a {
           border: 2px solid #fff;
           border-radius: 5px;
@@ -86,7 +87,7 @@ export default function Home() {
           font-weight: bold;
           transition: all 0.1s;
         }
-        
+
         .header .link a:hover {
           background: #fff;
           color: #EC2027;
