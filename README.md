@@ -22,4 +22,5 @@ To run the script, `$ yarn run update`.
 ```
 $ docker build -t gcr.io/vg-status-page/vgstatus .
 $ docker push gcr.io/vg-status-page-vgstatus
+$ kubectl rollout restart deployment/vgstatus
 ```
