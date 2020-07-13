@@ -9,7 +9,7 @@ pipeline {
         echo 'Hello'
 
         withCredentials([
-          sshUserPrivateKey(credentials: 'vgstatus-private-key', keyFileVariable: PRIVATE_KEY)
+          sshUserPrivateKey(credentialsId: 'vgstatus-private-key', keyFileVariable: 'PRIVATE_KEY')
         ]) {
           echo "The private key path is: ${PRIVATE_KEY}"
         }
