@@ -50,7 +50,6 @@ export default memo(({ sites }) => {
         .awesome-meter {
           text-align: center;
           font-family: monospace;
-          border: 2px solid red;
         }
         .green {
           color: green;

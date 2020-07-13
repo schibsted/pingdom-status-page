@@ -18,6 +18,12 @@ export default function Site(props) {
           <div className="value">{props.name}</div>
           <div className={"status " + props.status}>{props.status}</div>
         </div>
+
+        {/* TODO: Make this non-static. The data exists in Pingdom's API. */}
+        <div className="days">
+          {[...Array(30)].map((e, i) => <div className="day">&nbsp;</div>)}
+        </div>
+
         <div className="details">
           <div className="detail uptime">
             <div className="label">Up</div>
@@ -46,6 +52,26 @@ export default function Site(props) {
           border-radius: 5px;
           font-size: 1.3rem;
           color: #fff;
+        }
+
+        .days {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: nowrap;
+          justify-content: space-between;
+          width: 30%;
+          background: rgba(0, 0, 0, 0.2);
+          padding: 0.5rem;
+          border-radius: 5px;
+        }
+
+        .days .day {
+          display: inline-block;
+          width: 3px;
+          height: 100%;
+          border: 2px solid hsla(120, 100%, 25%, 1);
+          border-radius: 10px;
+          background: hsla(120, 100%, 25%, 1);
         }
 
         .name {
