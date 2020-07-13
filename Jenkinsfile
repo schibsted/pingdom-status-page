@@ -15,7 +15,7 @@ pipeline {
       }
       steps {
         sshagent(['vgstatus-private-key']) {
-          sh "ssh -o StrictHostKeyChecking=no ${USERNAME}@${HOST} \"cd /home/vgstatus/vgstatus && git pull\""
+          sh "ssh -o StrictHostKeyChecking=no ${USERNAME}@${HOST} \"cd /home/vgstatus/vgstatus && git pull && yarn build\""
           sh "ssh -o StrictHostKeyChecking=no ${USERNAME}@${HOST} \"sudo systemctl restart vgstatus\""
         }
       }
