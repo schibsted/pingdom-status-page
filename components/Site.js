@@ -63,6 +63,7 @@ export default function Site(props) {
           background: rgba(0, 0, 0, 0.2);
           padding: 0.3rem;
           border-radius: 5px;
+          cursor: pointer;
         }
 
         .days .day {
@@ -78,7 +79,6 @@ export default function Site(props) {
           border-color: hsla(120, 100%, 35%, 1);
           border-bottom-color: rgba(0, 0, 0, 0.3);
           background-color: hsla(120, 100%, 35%, 1);
-          cursor: pointer;
         }
 
         .name {
