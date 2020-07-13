@@ -4,7 +4,7 @@ import Sites from '../components/Sites';
 
 export default function Home() {
   return (
-    <div>
+    <div className="wrap">
       <Head>
         <title>VG Status</title>
         <link rel="icon" href="/favicon.ico" />
@@ -27,7 +27,8 @@ export default function Home() {
         <Sites />
       </main>
 
-      <footer>
+      <footer className="footer">
+        Made with ❤️  by VG Tech
       </footer>
 
       <style jsx>{`
@@ -42,6 +43,17 @@ export default function Home() {
           background: rgb(28, 28, 28);
           color: #fff;
           font-family: Roboto, Helvetica, Arial;
+          height: 100%;
+        }
+
+        #__next {
+          display: contents;
+        }
+
+        .wrap {
+          display: grid;
+          grid-template-rows: 10% 80% 10%;
+          min-height: 100%;
         }
 
         .header {
@@ -98,6 +110,15 @@ export default function Home() {
           max-width: 1100px;
           margin: 0 auto;
           padding: 0 1rem;
+          min-height: 100%;
+          width: 100%;
+        }
+
+        .footer {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-weight: bold;
         }
 
         * {
