@@ -74,6 +74,13 @@ export default function Site(props) {
           background: hsla(120, 100%, 25%, 1);
         }
 
+        .days .day:hover {
+          border-color: hsla(120, 100%, 35%, 1);
+          border-bottom-color: rgba(0, 0, 0, 0.3);
+          background-color: hsla(120, 100%, 35%, 1);
+          cursor: pointer;
+        }
+
         .name {
           display: flex;
           flex-direction: row;
