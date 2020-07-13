@@ -61,15 +61,15 @@ export default function Site(props) {
           justify-content: space-between;
           width: 30%;
           background: rgba(0, 0, 0, 0.2);
-          padding: 0.5rem;
+          padding: 0.3rem;
           border-radius: 5px;
         }
 
         .days .day {
           display: inline-block;
           width: 3px;
-          height: 100%;
           border: 2px solid hsla(120, 100%, 25%, 1);
+          border-bottom: 3px solid rgba(0, 0, 0, 0.3);
           border-radius: 10px;
           background: hsla(120, 100%, 25%, 1);
         }
