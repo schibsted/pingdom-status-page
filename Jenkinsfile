@@ -6,7 +6,7 @@ pipeline {
   }
 
   stages {
-    stage("Deploy") {
+    stage("deploy") {
       steps {
         echo 'Deploying the application...'
         echo "Branch is ${BRANCH_NAME}"
