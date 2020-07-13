@@ -1,10 +1,6 @@
 pipeline {
   agent any
 
-  environment {
-    SERVER_CREDENTIALS = credentials('vgstatus-private-key')
-  }
-
   stages {
     stage("deploy") {
       steps {
