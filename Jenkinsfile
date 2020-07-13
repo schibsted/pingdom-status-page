@@ -3,6 +3,11 @@ pipeline {
 
   stages {
     stage("Deploy") {
+      when {
+        expression {
+          BRANCH_NAME == 'master'
+        }
+      }
       steps {
         echo 'Deploying the application...'
         echo "Branch is ${BRANCH_NAME}"
