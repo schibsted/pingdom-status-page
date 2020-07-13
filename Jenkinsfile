@@ -2,7 +2,7 @@ pipeline {
   agent any
 
   stages {
-    stage("deploy") {
+    stage("Deploy") {
       steps {
         echo 'Deploying the application...'
         echo "Branch is ${BRANCH_NAME}"
