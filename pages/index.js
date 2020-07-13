@@ -60,7 +60,7 @@ export default function Home() {
           width: 100%;
           background: #EC2027;
           margin-bottom: 2rem;
-          padding: 0.5rem 0 0.2rem 0;
+          padding-top: 0.3rem;
           border-bottom: 0.3rem solid rgba(0, 0, 0, 0.15);
         }
 
