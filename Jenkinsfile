@@ -3,7 +3,7 @@ pipeline {
 
   environment {
     USERNAME = 'vgstatus'
-    HOST = 'vgstatus'
+    HOST = '35.228.143.8'
   }
 
   stages {
