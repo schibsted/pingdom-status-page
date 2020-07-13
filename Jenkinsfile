@@ -7,13 +7,9 @@ pipeline {
 
   stages {
     stage("Deploy") {
-      when {
-        expression {
-          BRANCH_NAME == 'master'
-        }
-      }
       steps {
         echo 'Deploying the application...'
+        echo "Branch is ${BRANCH_NAME}"
 
         withCredentials([
           sshUserPrivateKey(credentials: 'vgstatus-private-key', keyFileVariable: PRIVATE_KEY)
