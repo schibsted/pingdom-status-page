@@ -52,8 +52,6 @@ export default function Home() {
 
         .wrap {
           display: grid;
-          grid-template-rows: 10% 80% 10%;
-          min-height: 100%;
         }
 
         .header {
