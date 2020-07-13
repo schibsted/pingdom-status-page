@@ -17,7 +17,6 @@ pipeline {
         sshagent(['vgstatus-private-key']) {
           sh "ssh -o StrictHostKeyChecking=no ${USERNAME}@${HOST} \"cd /home/vgstatus/vgstatus && git pull\""
           sh "ssh -o StrictHostKeyChecking=no ${USERNAME}@${HOST} \"sudo systemctl restart vgstatus\""
-          echo "The private key path is: ${PRIVATE_KEY}"
         }
       }
     }
