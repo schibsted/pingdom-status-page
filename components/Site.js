@@ -61,7 +61,7 @@ export default function Site(props) {
           justify-content: space-between;
           width: 30%;
           background: rgba(0, 0, 0, 0.2);
-          padding: 0.3rem;
+          padding: 0.4rem;
           border-radius: 5px;
           cursor: pointer;
         }
