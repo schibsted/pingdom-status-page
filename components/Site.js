@@ -32,7 +32,7 @@ export default function Site(props) {
 
           <div className="detail downtime">
             <div className="label">Down</div>
-            <div className="value">{props.downtime} min</div>
+            <div className="value">{props.downtime / 60} min</div>
           </div>
         </div>
       </div>
