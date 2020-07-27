@@ -108,7 +108,7 @@ export default function Site(props) {
           background: rgba(0, 0, 0, 0.9);
           border-radius: 8px;
           padding: 0.7rem;
-          width: 130px;
+          width: 150px;
           z-index: 1000;
           text-align: center;
           font-size: 0.9rem;
