@@ -59,7 +59,7 @@ export default function Home() {
         .header {
           width: 100%;
           background: #EC2027;
-          margin-bottom: 2rem;
+          margin-bottom: 1rem;
           padding-top: 0.3rem;
           border-bottom: 0.3rem solid rgba(0, 0, 0, 0.15);
         }

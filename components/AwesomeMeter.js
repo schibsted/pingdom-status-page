@@ -67,6 +67,7 @@ export default memo(({ sites }) => {
           padding: 5px 9px;
           border-bottom: 3px solid rgba(0, 0, 0, 0.3);
           border-radius: 3px;
+          margin-bottom: 1rem;
         }
       `}
       </style>
