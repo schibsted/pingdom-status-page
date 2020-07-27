@@ -9,7 +9,7 @@ export default async (req, res) => {
   });
 
   const days = await new Promise((resolve, reject) => {
-    db.all('SELECT * FROM days', (err, rows) => {
+    db.all('SELECT * FROM days ORDER BY starttime ASC', (err, rows) => {
       if (err) return reject(err);
       resolve(rows);
     });
