@@ -19,11 +19,10 @@ export default function Site(props) {
           <div className={"status " + props.status}>{props.status}</div>
         </div>
 
-        {/* TODO: Make this non-static. The data exists in Pingdom's API. */}
         <div className="days">
           {props.days.map((day, i) =>
             <div className={`day ${day.downtime > 0 ? "downtime" : ""}`}>
-              &nbsp;
+              <div className="bar">&nbsp;</div>
               <div className="day-details">
                 <div className="day-time">{ new Date(day.starttime * 1000).toLocaleDateString('en-GB') }</div>
                 <div className="day-downtime">{day.downtime / 60} min down</div>
@@ -76,26 +75,31 @@ export default function Site(props) {
 
         .days .day {
           position: relative;
+        }
+
+        .days .day .bar {
           display: inline-block;
           width: 3px;
           border: 2px solid hsla(120, 100%, 25%, 1);
           border-bottom: 3px solid rgba(0, 0, 0, 0.3);
           border-radius: 10px;
           background: hsla(120, 100%, 25%, 1);
+          transform: scale(1.0);
         }
 
-        .days .day:hover {
+        .days .day .bar:hover {
           border-color: hsla(120, 100%, 35%, 1);
           border-bottom-color: rgba(0, 0, 0, 0.3);
           background-color: hsla(120, 100%, 35%, 1);
+          transform: scale(1.2);
         }
 
-        .days .day.downtime {
+        .days .day.downtime .bar {
           border-color: hsla(358, 84%, 53%, 1);
           background: hsla(358, 84%, 53%, 1);
         }
 
-        .days .day.downtime:hover {
+        .days .day.downtime .bar:hover {
           border-color: hsla(358, 95%, 57%, 1);
           background: hsla(358, 95%, 57%, 1);
         }
