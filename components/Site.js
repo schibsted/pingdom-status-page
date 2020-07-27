@@ -21,7 +21,15 @@ export default function Site(props) {
 
         {/* TODO: Make this non-static. The data exists in Pingdom's API. */}
         <div className="days">
-          {[...Array(30)].map((e, i) => <div className="day">&nbsp;</div>)}
+          {props.days.map((day, i) =>
+            <div className={`day ${day.downtime > 0 ? "downtime" : ""}`}>
+              &nbsp;
+              <div className="day-details">
+                <div className="day-time">{ new Date(day.starttime * 1000).toLocaleDateString('en-GB') }</div>
+                <div className="day-downtime">{day.downtime / 60} min down</div>
+              </div>
+            </div>
+          )}
         </div>
 
         <div className="details">
@@ -67,6 +75,7 @@ export default function Site(props) {
         }
 
         .days .day {
+          position: relative;
           display: inline-block;
           width: 3px;
           border: 2px solid hsla(120, 100%, 25%, 1);
@@ -79,6 +88,39 @@ export default function Site(props) {
           border-color: hsla(120, 100%, 35%, 1);
           border-bottom-color: rgba(0, 0, 0, 0.3);
           background-color: hsla(120, 100%, 35%, 1);
+        }
+
+        .days .day.downtime {
+          border-color: hsla(358, 84%, 53%, 1);
+          background: hsla(358, 84%, 53%, 1);
+        }
+
+        .days .day.downtime:hover {
+          border-color: hsla(358, 95%, 57%, 1);
+          background: hsla(358, 95%, 57%, 1);
+        }
+
+        .days .day .day-details {
+          position: absolute;
+          top: 30px;
+          left: -75px;
+          display: none;
+          background: rgba(0, 0, 0, 0.9);
+          border-radius: 8px;
+          padding: 0.7rem;
+          width: 130px;
+          z-index: 1000;
+          text-align: center;
+          font-size: 0.9rem;
+        }
+
+        .days .day:hover .day-details {
+          display: block;
+        }
+
+        .days .day .day-time {
+          font-weight: bold;
+          margin-bottom: 0.3rem;
         }
 
         .name {

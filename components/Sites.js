@@ -29,6 +29,7 @@ export default function Sites(props) {
             uptime={site.uptime}
             downtime={site.downtime}
             unknowntime={site.unknowntime}
+            days={site.days}
           />
         ))}
       </div>
