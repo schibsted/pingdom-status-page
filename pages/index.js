@@ -107,7 +107,7 @@ export default function Home() {
         }
 
         .container {
-          max-width: 1100px;
+          max-width: 1000px;
           margin: 0 auto;
           padding: 0 1rem;
           min-height: 100%;

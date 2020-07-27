@@ -205,7 +205,7 @@ export default function Site(props) {
           min-width: 5rem;
         }
 
-        @media (max-width: 600px) {
+        @media (max-width: 1000px) {
           .site {
             flex-wrap: wrap;
           }
@@ -215,6 +215,15 @@ export default function Site(props) {
             margin-bottom: 0.8rem;
           }
 
+          .days {
+            width: 100%;
+            margin-bottom: 0.8rem;
+          }
+
+          .details {
+            width: 100%;
+            justify-content: flex-start;
+          }
         }
 
       `}</style>
