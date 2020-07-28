@@ -19,8 +19,4 @@ To run the script, `$ yarn run update`.
 
 ## Deploy
 
-```
-$ docker build -t gcr.io/vg-status-page/vgstatus .
-$ docker push gcr.io/vg-status-page-vgstatus
-$ kubectl rollout restart deployment/vgstatus
-```
+Jenkins automatically deploys `master` to a virtual machine on Google Cloud.
