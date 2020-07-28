@@ -25,11 +25,11 @@ export default function Home() {
 
       <main className="container">
         <Sites />
-      </main>
 
-      <footer className="footer">
-        Made with ❤️  by VG Tech
-      </footer>
+        <footer className="footer">
+          Made with &#10084;&#65039; by VG
+        </footer>
+      </main>
 
       <style jsx>{`
       `}</style>
@@ -115,10 +115,9 @@ export default function Home() {
         }
 
         .footer {
-          display: flex;
-          align-items: center;
-          justify-content: center;
+          text-align: center;
           font-weight: bold;
+          margin: 30px auto;
         }
 
         * {
