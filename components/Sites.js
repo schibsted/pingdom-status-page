@@ -34,7 +34,19 @@ export default function Sites(props) {
         ))}
       </div>
 
+      <div className="information">
+        All statistics for last 30 days
+      </div>
+
       <style jsx>{`
+
+        .information {
+          color: rgba(255, 255, 255, 0.3);
+          text-style: italic;
+          text-align: center;
+          margin: 0.8rem 0;
+        }
+
       `}</style>
     </div>
   );
