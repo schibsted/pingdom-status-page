@@ -8,7 +8,7 @@ const formatPercent = (value) => {
 
 export default function Site(props) {
   const percent = formatPercent(
-    props.uptime / (props.uptime + props.downtime + props.unknowntime)
+    props.uptime / (props.uptime + props.downtime)
   * 100);
 
   return (

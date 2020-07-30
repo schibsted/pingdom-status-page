@@ -25,9 +25,9 @@ const isItAwsome = (avg) => {
 const allUp = (sites) => sites.every(({ status }) => status === 'up');
 
 export default memo(({ sites }) => {
-  const avg = sites.map(({ uptime, downtime, unknowntime }) => {
+  const avg = sites.map(({ uptime, downtime }) => {
     return formatPercent(
-        uptime / (uptime + downtime + unknowntime) * 100
+        uptime / (uptime + downtime) * 100
     );
   }).reduce((sum, value) => sum + value, 0) / sites.length;
 
