@@ -65,7 +65,7 @@ export default function Site(props) {
           display: flex;
           flex-direction: row;
           flex-wrap: nowrap;
-          justify-content: space-between;
+          justify-content: flex-end;
           width: 30%;
           background: rgba(0, 0, 0, 0.2);
           padding: 0.4rem;
@@ -75,11 +75,11 @@ export default function Site(props) {
 
         .days .day {
           position: relative;
+          width: 1.23%;
+          margin: 0 1%;
         }
 
         .days .day .bar {
-          display: inline-block;
-          width: 3px;
           border: 2px solid hsla(120, 100%, 25%, 1);
           border-bottom: 3px solid rgba(0, 0, 0, 0.3);
           border-radius: 10px;
