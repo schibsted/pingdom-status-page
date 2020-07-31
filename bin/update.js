@@ -1,4 +1,4 @@
-const PINGDOM_FEATURED_CHECKS = process.env.PINGDOM_FEATURED_CHECKS.split(',');
+import config from '../config';
 
 import db from '../lib/db';
 import pingdom from '../lib/pingdom';
@@ -25,7 +25,9 @@ db.serialize(() => {
   )`);
 });
 
-pingdom.checks(PINGDOM_FEATURED_CHECKS).then(checks => {
+const checkIds = config.checks.map(check => check.id);
+
+pingdom.checks(checkIds).then(checks => {
   checks.map(check => {
     pingdom.uptime(check.id).then(uptime => {
       db.run(`INSERT INTO sites (id, name, status, uptime, downtime, unknowntime, position)
@@ -36,7 +38,7 @@ pingdom.checks(PINGDOM_FEATURED_CHECKS).then(checks => {
         $uptime: uptime.summary.status.totalup,
         $downtime: uptime.summary.status.totaldown,
         $unknowntime: uptime.summary.status.totalunknown,
-        $position: PINGDOM_FEATURED_CHECKS.indexOf(check.name)
+        $position: checkIds.indexOf(check.id)
       });
 
       pingdom.days(check.id).then(response => {
@@ -50,9 +52,9 @@ pingdom.checks(PINGDOM_FEATURED_CHECKS).then(checks => {
             $downtime: day.downtime
           });
         });
-      }).catch(err => console.log(err.response));
+      }).catch(err => console.log(`Error: ${err}`));
 
       console.log(`Updated ${check.name}`);
-    }).catch(err => console.log(err.response));
+    }).catch(err => console.log(`Error: ${err}`));
   });
 });
