@@ -102,7 +102,7 @@ export default memo(({ sites }) => {
 
         @keyframes bounce {
           5% { transform: translate(0, 0); }
-          10% { transform: translate(0, -10px); }
+          10% { transform: translate(0, -5px); }
           15% { transform: translate(0, 0); }
         }
       `}
