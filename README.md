@@ -10,12 +10,31 @@ the latest data from Pingdom.
 You need to set the environment variables:
 
 * `PINGDOM_API_KEY`: A Pingdom API key, obviously
-* `PINGDOM_FEATURED_CHECKS`: A comma-separated list of Pingdom check names
 
 To run the server, `$ yarn dev` for development or `$ yarn start` for production. Then open
 [http://localhost:3000](http://localhost:3000) with your browser to see it.
 
 To run the script, `$ yarn run update`.
+
+## Configuration
+
+Configure your checks in `config.json`:
+
+```javascript
+{
+  "checks": [
+    {
+      "id": 4574685, // The check ID on Pingdom
+      "name": "VG Front page" // Whatever you want it to be listed as on your status page
+    },
+    {
+      "id": 6420183,
+      "name": "VG Articles"
+    },
+    ...
+  ]
+}
+```
 
 ## Deploy
 
