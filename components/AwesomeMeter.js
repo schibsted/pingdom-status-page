@@ -89,7 +89,7 @@ export default memo(({ sites }) => {
 
         .letter {
           display: inline-block;
-          animation: bounce 5s infinite alternate ease-in-out;
+          animation: bounce 5s infinite ease-in-out;
         }
 
         .letter-1 { animation-delay: 0.0s }
