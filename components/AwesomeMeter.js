@@ -101,15 +101,9 @@ export default memo(({ sites }) => {
         .letter-7 { animation-delay: 0.6s }
 
         @keyframes bounce {
-          0% {
-            transform: translate(0, 0);
-          }
-          95% {
-            transform: translate(0, 0);
-          }
-          100% {
-            transform: translate(0, -10px);
-          }
+          5% { transform: translate(0, 0); }
+          10% { transform: translate(0, -10px); }
+          15% { transform: translate(0, 0); }
         }
       `}
       </style>
