@@ -1,6 +1,6 @@
 # Pingdom Status Page
 
-A status page that displays your current and historical uptime from [Pingdom](https://pingdom.com).
+A status page that shows ~off~ your current and historical uptime from [Pingdom](https://pingdom.com).
 See it in action at [vgstatus.no](https://vgstatus.no).
 
 ## Getting started
