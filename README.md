@@ -33,6 +33,13 @@ Configure your checks in `config.json`:
 
 ## Frequently Asked Questions (that we made up)
 
+#### How can we customize it?
+
+Just change the code. That's right. That way, it's infinitely flexible, and that's what we would
+want for our status page.  If you want to make it easy to get updates from us, we recommend making
+a fork and branching out. Then all you have to do is `git pull` and fix any merge conflicts you might
+have from your changes.
+
 #### There are a lot of open source status pages. How is this different?
 
 There are a lot of open source status pages out there, but they're mostly manually updated
