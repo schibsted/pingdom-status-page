@@ -29,11 +29,13 @@ const checkIds = config.checks.map(check => check.id);
 
 pingdom.checks(checkIds).then(checks => {
   checks.map(check => {
+    const { name } = config.checks.find(configCheck => configCheck.id == check.id);
+
     pingdom.uptime(check.id).then(uptime => {
       db.run(`INSERT INTO sites (id, name, status, uptime, downtime, unknowntime, position)
         VALUES ($id, $name, $status, $uptime, $downtime, $unknowntime, $position)`, {
         $id: check.id,
-        $name: check.name,
+        $name: name,
         $status: check.status,
         $uptime: uptime.summary.status.totalup,
         $downtime: uptime.summary.status.totaldown,
