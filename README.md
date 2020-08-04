@@ -1,20 +1,15 @@
-# VG Status
+# Pingdom Status Page
 
-The code behind vgstatus.no.
-
-VG Status has two parts: The NextJS app that everyone sees, and a script that gets
-the latest data from Pingdom.
+A status page that displays your current and historical uptime from [Pingdom](https://pingdom.com).
+See it in action at [vgstatus.no](https://vgstatus.no).
 
 ## Getting started
 
-You need to set the environment variables:
-
-* `PINGDOM_API_KEY`: A Pingdom API key, obviously
-
-To run the server, `$ yarn dev` for development or `$ yarn start` for production. Then open
+First, set `PINGDOM_API_KEY` to your [Pingdom API key](https://my.pingdom.com/app/api-tokens). To 
+start the server, run `$ yarn dev` for development or `$ yarn start` for production. Then open
 [http://localhost:3000](http://localhost:3000) with your browser to see it.
 
-To run the script, `$ yarn run update`.
+To sync with Pingdom, run `$ yarn run update`.
 
 ## Configuration
 
@@ -24,7 +19,7 @@ Configure your checks in `config.json`:
 {
   "checks": [
     {
-      "id": 4574685, // The check ID on Pingdom
+      "id": 4574685, // The check ID on Pingdom (find it by opening it in Pingdom and looking in the URL)
       "name": "VG Front page" // Whatever you want it to be listed as on your status page
     },
     {
@@ -36,6 +31,44 @@ Configure your checks in `config.json`:
 }
 ```
 
-## Deploy
+## Frequently Asked Questions (that we made up)
 
-Jenkins automatically deploys `master` to a virtual machine on Google Cloud.
+#### There are a lot of open source status pages. How is this different?
+
+There are a lot of open source status pages out there, but they're mostly manually updated
+and can't show ~off~ your historical uptime. We could only find one other open source
+status page ([Statping](https://github.com/statping/statping)) which actually measures uptime,
+but if you're already using Pingdom then this is simpler.
+
+## Deployment
+
+Pingdom Status Page only needs NodeJS to run. It's important to us that it runs anywhere, so
+it's easy to set up in an environment that preferably _isn't the one you're monitoring_.
+
+#### systemd
+
+Here's a handy systemd file to run it:
+
+```
+[Unit]
+Description=Pingdom Status Page
+
+[Service]
+ExecStart=/usr/bin/yarn start -p 80
+StandardOutput=file:/path/to/your/stdout.log
+StandardError=file:/path/to/your/stderr.log
+Restart=always
+Environment=PATH=/usr/bin:/usr/local/bin
+WorkingDirectory=/path/to/the/code
+
+[Install]
+WantedBy=multi-user.target
+```
+
+#### crontab
+
+Here's a handy crontab to sync with Pingdom every minute and log it to a file:
+
+```crontab
+* * * * * (cd /path/to/the/code && . /path/to/the/code/.envrc && /usr/bin/yarn update) > /path/to/your/log 2>&1
+```
