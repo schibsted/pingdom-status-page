@@ -1,5 +1,5 @@
 {
-  "name": "vgstatus",
+  "name": "pingdom-status-page",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,7 +9,7 @@
     "update": "node -r esm bin/update.js"
   },
   "bin": {
-    "vgstatus-update": "bin/update"
+    "pingdom-status-page-update": "bin/update"
   },
   "dependencies": {
     "axios": "^0.19.2",
