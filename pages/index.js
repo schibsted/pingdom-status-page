@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <div className="wrap">
       <Head>
-        <title>VG Status</title>
+        <title>Schibsted Status</title>
         <link rel="icon" href="/favicon.ico" />
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap"/>
       </Head>

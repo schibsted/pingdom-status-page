@@ -2,7 +2,7 @@ export default function Footer() {
   return (
     <>
       <footer className="footer">
-        Made with &#10084;&#65039; by VG
+        { /* Your footer goes here */ }
       </footer>
 
       <style jsx>{`
