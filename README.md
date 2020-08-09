@@ -1,11 +1,11 @@
 # Pingdom Status Page
 
+A status page that shows ~off~ your current and historical uptime from [Pingdom](https://pingdom.com).
+See it in action at [vgstatus.no](https://vgstatus.no).
+
 <p align="center">
   <img src="docs/screenshot.png">
 </p>
-
-A status page that shows ~off~ your current and historical uptime from [Pingdom](https://pingdom.com).
-See it in action at [vgstatus.no](https://vgstatus.no).
 
 ## Getting started
 
