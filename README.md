@@ -53,8 +53,9 @@ but if you're already using Pingdom then this is simpler.
 
 ## Deployment
 
-Pingdom Status Page only needs NodeJS to run. It's important to us that it runs anywhere, so
-it's easy to set up in an environment that preferably _isn't the one you're monitoring_.
+Pingdom Status Page only needs NodeJS and a writable and persistent file system to run. It's
+important to us that it runs anywhere, so it's easy to set up in an environment that preferably
+_isn't the one you're monitoring_.
 
 #### systemd
 
